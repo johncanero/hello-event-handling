@@ -31,8 +31,11 @@ function App() {
   }
 
   const [headingText, setHeading] = useState("");
-  const handleClick = () => {
+  const handleClick = (event) => {
     setHeading(name)
+
+    // Remove Default Behavior
+    event.preventDefault();
   }
 
 
@@ -41,22 +44,24 @@ function App() {
   return (
     <div className="container">
         <h1>Hello {headingText}</h1>
-        <input 
-          onChange={handleChange} 
-          type="text" 
-          placeholder="What's your name?"
-          value={name} 
 
-        />
-        <button
-            style={{ backgroundColor: hover ? "#7c02ff97" : "white" }}  
-            onMouseOver={handleMouseIn} 
-            onMouseOut= {handleMouseOut}
-            onClick={handleClick}>
-            Submit
-        </button>
+        <form onSubmit={handleClick}>
+            <input 
+              onChange={handleChange} 
+              type="text" 
+              placeholder="What's your name?"
+              value={name} 
 
-  
+            />
+            <button
+                type='submit'
+                style={{ backgroundColor: hover ? "#7c02ff97" : "white" }}  
+                onMouseOver={handleMouseIn} 
+                onMouseOut= {handleMouseOut}
+                onClick={handleClick}>
+                Submit
+            </button>
+        </form>
    </div>
   );
 }
