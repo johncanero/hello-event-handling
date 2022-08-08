@@ -4,13 +4,13 @@ import './App.css';
 
 function App() {
 
-  const [headingText, setHeadingText] = useState("Hello");
+  // const [headingText, setHeadingText] = useState("Hello");
   const [hover, setHover] = useState(false);
 
-  const handleClick = () => {
-    // console.log("Clicked");
-    setHeadingText("Submitted");
-  }
+  // const handleClick = () => {
+  //   console.log("Clicked");
+  //   setHeadingText("Submitted");
+  // }
 
   const handleMouseIn = (event) => {
     setHover(true);
@@ -23,11 +23,31 @@ function App() {
   };
 
 
+  // React Forms
+  const [name, setName] = useState("");
+  const handleChange = (event) => {
+    console.log(event.target.value);
+    setName(event.target.value);
+  }
+
+  const [headingText, setHeading] = useState("");
+  const handleClick = () => {
+    setHeading(name)
+  }
+
+
+
 
   return (
     <div className="container">
-        <h1>{headingText}</h1>
-        <input type="text" placeholder="What's your name?" />
+        <h1>Hello {headingText}</h1>
+        <input 
+          onChange={handleChange} 
+          type="text" 
+          placeholder="What's your name?"
+          value={name} 
+
+        />
         <button
             style={{ backgroundColor: hover ? "#7c02ff97" : "white" }}  
             onMouseOver={handleMouseIn} 
