@@ -29,7 +29,7 @@ function App() {
         <h1>{headingText}</h1>
         <input type="text" placeholder="What's your name?" />
         <button
-            style={{ backgroundColor: hover ? "black" : "white" }}  
+            style={{ backgroundColor: hover ? "#7c02ff97" : "white" }}  
             onMouseOver={handleMouseIn} 
             onMouseOut= {handleMouseOut}
             onClick={handleClick}>
