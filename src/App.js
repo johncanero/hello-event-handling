@@ -25,12 +25,14 @@ function App() {
 
   // React Forms
   const [name, setName] = useState("");
+  
   const handleChange = (event) => {
     console.log(event.target.value);
     setName(event.target.value);
   }
 
   const [headingText, setHeading] = useState("");
+
   const handleClick = (event) => {
     setHeading(name)
 
@@ -53,6 +55,7 @@ function App() {
               value={name} 
 
             />
+            
             <button
                 type='submit'
                 style={{ backgroundColor: hover ? "#7c02ff97" : "white" }}  
