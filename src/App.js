@@ -11,12 +11,34 @@ function App() {
     setHeadingText("Submitted");
   }
 
+ 
+  // Hover Button
+  const [hover, setHover] = useState();
+
+  const handleMouseIn = (event) => {
+    setHover(true);
+    event.target.style.background = '#000';
+  };
+
+  const handleMouseOut = (event) => {
+    setHover(false);
+    event.target.style.background = '#fff';
+  };
+
+
 
   return (
     <div className="container">
         <h1>{headingText}</h1>
         <input type="text" placeholder="What's your name?" />
-        <button onClick={handleClick}>Submit</button>
+        <button  
+            onMouseOver={handleMouseIn} 
+            onMouseOut= {handleMouseOut}
+            onClick={handleClick}>
+            Submit
+        </button>
+
+  
    </div>
   );
 }
