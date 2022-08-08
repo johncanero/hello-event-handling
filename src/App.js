@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 
 
-function App() {
+const App = () => {
 
   // const [headingText, setHeadingText] = useState("Hello");
   const [hover, setHover] = useState(false);
@@ -55,7 +55,7 @@ function App() {
               value={name} 
 
             />
-            
+
             <button
                 type='submit'
                 style={{ backgroundColor: hover ? "#7c02ff97" : "white" }}  
