@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 
 
-
-
-const handleClick = () => {
-  console.log("Clicked");
-}
-
 function App() {
+
+  const [headingText, setHeadingText] = useState("Hello");
+
+  const handleClick = () => {
+    // console.log("Clicked");
+    setHeadingText("Submitted");
+  }
+
+
   return (
     <div className="container">
         <h1>{headingText}</h1>
