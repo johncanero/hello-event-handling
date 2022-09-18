@@ -15,14 +15,16 @@ body {
 }
 
 .container {
-  margin: 10% auto;
+  margin: 12% auto;
   padding: 80px 0;
   text-align: center;
 }
 
 .container h1 {
   font-size: 40px;
-  font-weight: 200;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+  text-shadow: 2px 2px 2px #7c02ff97
 }
 
 input {
